@@ -14,7 +14,9 @@ main {
     padding: 20px 20px;
 
 }
-.positioning, .flexbox {
+.positioning, 
+.flexbox,
+.grid {
     border: 2px solid skyblue;
     padding: 10px;
     margin-top: 20px;
@@ -28,4 +30,48 @@ main {
 
 .list-groupe-item {
     margin: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "prenom nom"
+    "message message"
+    "submit submit";
+    /* grid-gap: 10px; */
+}
+input, 
+textarea {
+    margin: 10px;
+    height: 44px;
+    border: 1px solid skyblue;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+#premon {
+    grid-area: prenom;
+}
+#nom {
+    grid-area: nom;
+}
+#message {
+    resize: none;
+    grid-area: message;
+    height: 200px;
+}
+#submit {
+    grid-area: submit;
+    background-color: aqua;
+    cursor: pointer; 
 }
