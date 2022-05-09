@@ -1,9 +1,9 @@
 /* déclarations des variables */
 :root {
-    --color1:#ede4d0;
-    --color2:pink;
-    --color3:#393b4b;
-    --color4:rgb(18,19,19);
+    --color1:#e1f8d8;
+    --color2:#40B84C;
+    --color3:#e8e863;
+    --color4:#001108;
 }
 
 * {
@@ -11,6 +11,7 @@
     padding: 0;
     box-sizing: border-box;
     color: var(--color1);
+    letter-spacing: 1px;
 }
 body {
     background: url(./bg2.jpg) center/cover;
@@ -19,6 +20,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(1px);
 }
 
 .card {
@@ -36,6 +38,42 @@ body {
     top: 14px;
     right: 20px;
     font-size: 2.4rem;
+    color: #BBE49F;
+    filter: brightness(1.2);
+    animation: flash 0.4s infinite;
+}
+
+@keyframes flash {
+    50% {
+        color: #BBE49F;
+    }
+    100% {
+        color: #306d08;
+    }
+}
+
+h1 {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+h1:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #40B84C;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    animation: anime-titre-h1 5s ease-in-out forwards ;
+    /* transform: translateX(-50%); */
+}
+
+@keyframes anime-titre-h1{
+    100% {
+        transform: translateX(-50%) scaleX(1);
+    } 
 }
 
 .grid-container {
@@ -45,11 +83,169 @@ body {
 
 .polygon-container {
     filter: dropdown(-1px 6px 3px var(--color2));
-    place-self: center;
+    /* Mettre le parent en grid pour ça fonctionne */
+    place-self: center left; 
 }
+
 .polygon {
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     background: linear-gradient(135deg, var(--color2) 0%, var(--color1) 100%);
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
+    position: relative;
+    /* text-align: center; */
+}
+
+.polygon::after {
+    content: "Logo texte";
+    color: var(--color2);
+    background: var(--color4);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    text-align: center;
+    width: 120px;
+}
+
+p {
+    line-height: 26px;
+    margin: 20px 6px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-align: justify;
+}
+
+p::selection {
+    background: #2971489a;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0 30px;
+    perspective: 40px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"]:checked + label {
+    background: var(--color2);
+    color: var(--color3);
+    transform: scale(1.1);
+}
+
+label {
+    cursor: pointer;
+    border: 1px solid var(--color1);
+    background: var(--color3);
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.2s;
+    /* user-select: none; desactive la fonction pour selectionner le texte sur  les checkbox  👇*/
+    user-select: none;
+    color: var(--color4);
+
+}
+label:first-of-type:hover {
+    animation: label1 1s linear infinite ;
+}
+
+@keyframes label1 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+label:nth-child(4):hover {
+    animation: label2 2s infinite ;
+}
+
+@keyframes label2 {
+    33% {
+        transform: translateZ(30px);
+    }
+    66% {
+        transform: translateZ(-40px);
+    }
+    100% {
+        transform: translateZ(0);
+    }
+    
+}
+
+.email {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.email input {
+    padding: 15px 10px;
+    text-align: center;
+    outline: none;
+    border-radius: 10px;
+    width: 30%;
+    max-width: 335px;
+    min-width:  150px;
+    font-size: 1.2rem;
+
+    border: 2px solid var(--color2);
+    background: transparent;
+    color: var(--color1);
+    filter: brightness(1.9);
+}
+
+.email input[type="email"]:focus {
+    border: 2px solid var(--color2);
+    border-radius: 20px;
+    background: transparent;
+    color: var(--color1);
+}
+
+.email input[type="email"]::placeholder {
+    color: var(--color1);
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    background: var(--color2);
+    color: var(--color1);
+    text-align: center;
+    display: block;
+    margin: 15px auto;
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: var(--color3);
+    color: var(--color4);
+    transform: scale(1.1);
+}
+
+button:hover + a, 
+a:hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+a {
+    text-align: center;
+    display: block;
+    margin: 15px auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.2s;
 }
