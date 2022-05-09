@@ -241,6 +241,7 @@ button:hover + a,
 a:hover {
     opacity: 1;
     transform: translateY(0);
+    visibility: visible
 }
 a {
     text-align: center;
@@ -249,6 +250,7 @@ a {
     opacity: 0;
     transform: translateY(30px);
     transition: 0.2s;
+    visibility: hidden;
 }
 
 img {
@@ -256,7 +258,7 @@ img {
     position: absolute;
     filter: drop-shadow(0 0 10px var(--color3));
     z-index: -1;
-    animation: anime-img 60s ;
+    animation: anime-img 30s infinite;
 }
 
 @keyframes anime-img {
@@ -264,6 +266,56 @@ img {
         top: 2%;
         left: 2%;
         transform: rotate(90deg);
+    }
+    10% {
+    top: 6%;
+    left: 30%;
+    transform: rotate(95deg);
+    }
+    20% {
+    top: 9%;
+    left: 60%;
+    transform: rotate(60deg);
+    }
+    30% {
+    top: 0%;
+    left: 80%;
+    transform: rotate(90deg);
+    }
+    40% {
+    top: 20%;
+    left: 120%;
+    transform: rotate(110deg);
+    }
+    50% {
+    top: 50%;
+    left: 80%;
+    transform: rotate(323deg);
+    }
+    60% {
+    top: 90%;
+    left: 90%;
+    transform: rotate(256deg);
+    }
+    70% {
+    top: 110%;
+    left: 50%;
+    transform: rotate(237deg);
+    }
+    80% {
+    top: 85%;
+    left: 30%;
+    transform: rotate(323deg);
+    }
+    90% {
+    top: 50%;
+    left: 15%;
+    transform: rotate(350deg);
+    }
+    100% {
+    top: 2%;
+    left: 2%;
+    transform: rotate(90deg);
     }
 }
 
