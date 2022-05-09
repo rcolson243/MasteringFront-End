@@ -21,6 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(1px);
+    overflow: hidden;
 }
 
 .card {
@@ -249,3 +250,21 @@ a {
     transform: translateY(30px);
     transition: 0.2s;
 }
+
+img {
+    width: 50px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px var(--color3));
+    z-index: -1;
+    animation: anime-img 60s ;
+}
+
+@keyframes anime-img {
+    0% {
+        top: 2%;
+        left: 2%;
+        transform: rotate(90deg);
+    }
+}
+
+
