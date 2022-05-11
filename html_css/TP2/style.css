@@ -1,11 +1,16 @@
+* {
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+p  { font-size: 0.8rem; }
+li { list-style: none; }
 body {
     width: 100%;
     height: 100vh;
-    margin: 0;
-    padding: 0;
     background: rgb(29, 28, 28);
     color: white;
-    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
@@ -22,7 +27,8 @@ nav {
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    /* background-color: black; */
+    align-items: center;
+    padding: 10px 20px;
 }
 
 nav ul {
@@ -33,15 +39,16 @@ nav ul {
 }
 
 .header {
-    width: 100%;
     height: 60vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 20px;
+    justify-content: space-around;
+    margin: 30px auto;
 }
 
 .header-left {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 50%;
 }
 
@@ -50,7 +57,7 @@ nav ul {
     font-weight: 500;
     margin-bottom: 0;
 }
-.header-left h3{
+.header-left-container h3{
     color: rgb(54, 41, 158);
     font-size: 1.7rem;
     margin: 0;
@@ -60,42 +67,53 @@ nav ul {
     width: 50%;
 }
 
-.header-right img {
-    width: 80%;
+#modem {
+    width: 100%;
 }
 
 .infos {
     background: rgb(15, 14, 14);
     display: flex;
-    justify-content: space-between;
-    margin: 0 20px;
-    height: auto;
-    padding: 0 10px;
     border-radius: 5px;
 }
 
-.infos-left .btn-container button {
-    display: block;
+.infos-left {
+    width: 30%;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.btn-container button {
     border: none;
     background: rgb(54, 41, 158);
     color: white;
-    margin: 10px;
     border-radius: 10px;
-    padding: 10px 20px;
-    text-align: center;
+    padding: 10px 0;
     width: 150px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 5px;
 }
 
 .infos-right {
-    width: auto;
+    width: 70%;
     display: flex;
 }
 
 .investors {
     display: flex;
     align-items: center;
+    justify-content: center;
+    height: 80%;
 }
-.investors img {
-    width: 90px;
-    margin: 0 100px;
+.img-container {
+    display: flex;
+    justify-content: space-around;
+}
+.img-container img {
+    height: 60px
+
 }
