@@ -1,0 +1,15 @@
+// les mixins 
+@mixin  center_x_y  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin border_radius {
+    border-radius: 5px;
+}
+
+@mixin margin_center {
+    margin: 0 auto;
+}
+    

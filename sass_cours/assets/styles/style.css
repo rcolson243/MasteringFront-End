@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+nav {
+  background: rgb(249, 162, 176);
+  border: 1px solid #000;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  list-style: none;
+  margin-right: 1rem;
+  padding: 1rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+nav ul li:hover {
+  background: rgb(243, 129, 129);
+}
+
+h1 {
+  background: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 3rem;
+  text-align: center;
+}
+h1:after {
+  content: "*";
+  position: absolute;
+  color: rgb(249, 162, 176);
+}
+h1:hover::after {
+  color: rgb(249, 134, 134);
+}
+
+.section {
+  margin: 20px auto;
+  width: 50%;
+  height: 40vh;
+  background-color: rgba(249, 120, 141, 0.913);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section p {
+  width: 70%;
+}
+
+footer {
+  background: rgb(249, 162, 176);
+  border: 1px solid #000;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+footer p {
+  padding: 1rem;
+  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+footer p:hover {
+  background: rgba(249, 120, 141, 0.913);
+}
+
+/*# sourceMappingURL=style.css.map */

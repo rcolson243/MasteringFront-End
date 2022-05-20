@@ -1,0 +1,50 @@
+// les role de style.scss est de ressembler tous les fichiers sass
+
+// les variables 
+@import "./layout/variables";
+
+// les mixins 
+@import "./layout/mixins";
+    
+
+
+@import "./pages/setting";
+
+// le nesting
+@import "./layout/navbar";
+
+
+
+h1 {
+    background: #fff;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+
+    &:after {
+        content: "*";
+        position: absolute;
+        color: rgb(249, 162, 176);
+
+    }
+    
+    &:hover::after{
+        color: rgb(249, 134, 134);
+    }
+}
+
+.section {
+    margin: 20px auto;
+    width: 50%;
+    height: 40vh;
+    background-color: $coleurs_de_base;
+    @include border_radius;
+    @include center_x_y;
+
+    p {
+        
+        width: 70%;
+    }
+}
+
+@import "./layout/footer";
