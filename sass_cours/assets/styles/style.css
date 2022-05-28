@@ -9,29 +9,6 @@ body {
   font-size: 16px;
 }
 
-nav {
-  background: rgb(249, 162, 176);
-  border: 1px solid #000;
-}
-nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-nav ul li {
-  list-style: none;
-  margin-right: 1rem;
-  padding: 1rem;
-}
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.5rem;
-}
-nav ul li:hover {
-  background: rgb(243, 129, 129);
-}
-
 h1 {
   background: #fff;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
@@ -59,6 +36,29 @@ h1:hover::after {
 }
 .section p {
   width: 70%;
+}
+
+nav {
+  background: rgb(249, 162, 176);
+  border: 1px solid #000;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  list-style: none;
+  margin-right: 1rem;
+  padding: 1rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+nav ul li:hover {
+  background: rgb(243, 129, 129);
 }
 
 footer {
