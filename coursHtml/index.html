@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours Html</title>
+    <link rel="shortcut icon" href="resources/logoHtml">
+</head>
+<body>
+    <header>
+        <h1>Titre - h1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, dolore officiis quia accusantium hic delectus?
+        </p>
+    </header>
+
+    <section>
+        <div>
+            <div>
+                <h2>Titre - h2 photo</h2>
+                <img src="/resources/safari-designify.png" alt="photo de rams safari">
+            </div>
+
+            <div>
+                <h3>Titre - h3 les listes</h3>
+                <ul>
+                    <li>UL = Onordered Liste</li>
+                    <li>UL = Onordered Liste</li>
+                    <li>UL = Onordered Liste</li>
+                </ul>
+
+                <ol>
+                    <li>UL = Ordered Liste</li>
+                    <li>UL = Ordered Liste</li>
+                    <li>UL = Ordered Liste</li>
+                </ol>
+
+            </div>
+            <div>
+                <h4>Titre - h4 Les tableaux</h4>
+                <table border="1" width="30%">
+                    <!-- légende -->
+                    <caption>Populations d'europe</caption>
+                    <thead>
+                        <tr>
+                            <th>Pays</th>
+                            <th>Population</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Belgique</td>
+                            <td>8M</td>
+                        </tr>
+                        <tr>
+                            <td>France</td>
+                            <td>30M</td>
+                        </tr>
+                        <tr>
+                            <td>Congo Rdc</td>
+                            <td>80M</td>
+                        </tr>
+                    </tbody> 
+
+                </table>
+
+                <div>
+                    <h5>Titre - h5 les liens</h5>
+                    <a href="https://htmlcheatsheet.com" target="_blank">
+                        resources Html
+                    </a>
+                    <br>
+                    <a href="https://github.com/" target="_blank">GitHub</a>
+                </div>
+
+                <div>
+                    <h6>Titre - h6 Les video</h6>
+                    <video src="/resources/Matrice - 100218.mp4" height="200" autoplay lood muted></video>
+                </div>
+
+                <footer>
+                    <h2>Les Formulaires</h2>
+                    <form action="">
+                        <label for="name">Votre nom</label>
+                        <input type="text" placeholder="Entrer votre nom " id="name">
+                        <br>
+                        <br>
+                        <label for="age">Votre age</label>
+                        <input type="number" placeholder="Entrer votre age " id="age" min="13">
+                        <br>
+                        <br>
+                        <label for="mail">Votre adress mail</label>
+                        <input type="email" placeholder="Entrer votre adress mail" id="mail">
+                        <br>
+                        <br>
+                        <label for="gender">Genre</label>
+                        <select name="" id="gender">
+                            <option value="M">M</option>
+                            <option value="F">F</option>
+                        </select>
+                        <br>
+                        <br>
+
+                        <div>
+                            <!-- input radio -->
+                            <label for="human">Humain</label>
+                            <input type="radio" name="type" id="human">
+
+                            <label for="dog">Chien</label>
+                            <input type="radio" name="type" id="dog">
+
+                            <label for="cat">Chat</label>
+                            <input type="radio" name="type" id="cat">
+                        </div>
+
+                        <br>
+                        <br>
+                        <label for="condition">Nos condition</label>
+                        <input type="checkbox">
+                        <br>
+                        <br>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Votre message"></textarea>
+                        <br>
+                        <br>
+
+                        <button type="submit">Validation</button>
+
+                        <a href="mailto:raphael.kasese@gmail.com">Ecrivez-moi</a>
+                        <br>
+                        <a href="/resources/dossier/notice.txt" download="notice">
+                            Télécharger la notice
+                        </a>
+
+                    </form>
+                </footer>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
